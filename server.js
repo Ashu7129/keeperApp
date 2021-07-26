@@ -13,7 +13,7 @@ app.use(express.urlencoded({extended:true}));
 app.use(express.static(path.resolve(__dirname, "./client/build")));
 
 mongoose
-.connect("mongodb+srv://ashutosh-admin:ashutosh123@cluster0.oj4d9.mongodb.net/KeeperDB?retryWrites=true&w=majority", { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: true })
+.connect(process.env.DB_URL, { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: true })
 .then(() => console.log("MOngoDB connected..."))
 .catch(err => console.log(err));
 mongoose.set('useCreateIndex', true);
