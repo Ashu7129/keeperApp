@@ -9,8 +9,8 @@
     "build":"cd client && npm run build",
     "install-client": "cd client && npm install",
     "heroku-postbuild": "npm run install-client && npm run build",
-    "develop": "concurrently --kill-others-on-fail \"npm run server\" \"npm run start --prefix client\"",
-    "start": "concurrently --kill-others-on-fail \"npm run server\" \"npm run start --prefix client\""
+    "develop": "concurrently \"npm run server\" \"npm run start --prefix client\"",
+    "start": "concurrently \"npm run server\" \"npm run start --prefix client\""
   },
   "author": "Ashutosh",
   "license": "ISC",
@@ -22,6 +22,6 @@
     "mongoose": "^5.13.3"
   },
   "engines": {
-    "node": "14.x"
+    "node": "14.17.3"
   }
 }
