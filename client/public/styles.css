@@ -5,24 +5,63 @@
 html {
   font-family: "Montserrat", sans-serif;
 }
+
+:root{
+  --nav-size:60px;
+  --bg-navbar:#f5ba13;
+}
 body {
   background: rgb(248, 231, 153);
  background-image: url("https://www.transparenttextures.com/patterns/diagmonds-light.png");
   padding: 0 0; 
 }
 
-
-header {
-  background-color: #f5ba13;
-  margin: auto;
-  padding: 16px ;
+.navbar {
+  position: relative;
+  background-color:var(--bg-navbar);
+  height: var(--nav-size);
+  padding: 0 1rem;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
 }
+.account{
+  padding:  10px 15px;
+  width: fit-content;
+  color: #fff;
+  position: absolute;
+  right: 0;
+  top:0;
+  font-size: calc(var(--nav-size)*0.4);
+  cursor: pointer;
+}
 
-header h1 {
+
+.logo{
+  padding:  5px 15px;
+  width: fit-content;
   color: #fff;
   font-family: "McLaren", cursive;
   font-weight: 300;
+  font-size: 200%;
+}
+
+
+.dropdown-list{
+  width: auto;
+  position: absolute;
+  padding: 10px;
+  right: 1%;
+  border-radius: 10px;
+  background-color: rgb(255, 145, 0);
+}
+
+.dropdown-list ul{
+  margin: 10px;
+  list-style: none;
+}
+.dropdown-list li{
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
 }
 
 footer {
