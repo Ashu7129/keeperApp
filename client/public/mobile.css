@@ -26,20 +26,16 @@
       width: 100%;
       box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
     }
-    .navbar ul{
-      list-style:none;
-      margin: 0;
-      padding: 0;
-    }
-    
-    .navbar-nav{
+    .account{
+      padding:  10px 15px;
+      width: fit-content;
+      color: #fff;
       position: absolute;
-      left: 85%;
-      top: 25%;
+      right: 0;
+      top:0;
+      font-size: calc(var(--nav-size)*0.4);
+      cursor: pointer;
     }
-    
-    
-    
     
     .logo{
       padding:  5px 15px;
@@ -64,6 +60,8 @@
     .dropdown-list ul{
       margin: 10px;
       align-items: center;
+      list-style: none;
+
     }
     .dropdown-list li{
       padding: 10px;

@@ -42,7 +42,7 @@ const Form = (props) => {
                     username: email,
                     password: password
                 }
-            });
+            }).then((response)=>{window.alert(response.data); window.location.reload()});
 
         }
 
@@ -57,7 +57,7 @@ const Form = (props) => {
                     username: email,
                     password: password
                 }
-            });
+            }).then((response)=>{window.alert(response.data);window.location.reload()});
 
         }
         e.preventDefault();
@@ -68,6 +68,8 @@ const Form = (props) => {
     if (props.formtype === "Login") {
         return (
             <form className={classes.root} onSubmit={handleSubmit}>
+            <h3>Login to Keeper-App</h3>
+            <br />
                 <TextField
                     label="Email"
                     variant="filled"
@@ -97,6 +99,8 @@ const Form = (props) => {
     } else {
         return (
             <form className={classes.root} onSubmit={handleSubmit}>
+            <h3>Register to Keeper-App</h3>
+            <br />
                 <TextField
                     label="First Name"
                     variant="filled"

@@ -2,28 +2,14 @@ import React, { useState } from "react";
 import AddIcon from "@material-ui/icons/Add";
 import Fab from "@material-ui/core/Fab";
 import Zoom from "@material-ui/core/Zoom";
-import axios from "axios"
-function CreateArea(props) {
+import {AddNote} from "./database";
+
+function CreateArea() {
   const [isExpanded, setIsExpanded] = useState(false);
   const [note, setNote] = useState({
     title: "",
     content: ""
   });
-
-
- function addNote(newNote) {
-    axios({
-      method:"post",
-      url:"/api/notes/addNote",
-      data:{
-        title: newNote.title,
-        content:newNote.content
-      }
-    });
-    props.setMountNotes(true);
-  }
- 
- 
 
   function expand() {
     setIsExpanded(true);
@@ -39,7 +25,7 @@ function CreateArea(props) {
     });
   }
   function handleSubmit(event){
-    addNote(note);
+    AddNote(note);
     setNote({title:"",content:""});
   }
 
